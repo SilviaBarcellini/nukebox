@@ -1,0 +1,10 @@
+.name {
+  font-weight: bolder;
+  font-size: 1.2em;
+  display: block;
+  padding-left: 15px;
+}
+
+.hello {
+  padding-left: 15px;
+}

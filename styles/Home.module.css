@@ -1,3 +1,23 @@
 .container {
   display: grid;
+  padding: 2em;
+}
+
+.name {
+  font-weight: bolder;
+  font-size: 1.2em;
+  display: block;
+}
+
+/* .card {
+  background-color: deeppink;
+  margin-left: 2em;
+}
+ */
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 1em;
 }
