@@ -13,7 +13,6 @@ export default function TrackItem({ imgSrc, song, artist }: Props) {
       <img className={styles.img} src={imgSrc} alt="" />
       <div className={styles.artist}>{artist}</div>
       <div className={styles.song}>{song}</div>
-      {/* <li className={styles.song}>cover</li> */}
     </li>
   );
 }
