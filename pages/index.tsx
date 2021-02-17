@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       imgSrc:
-        "https://images.unsplash.com/photo-1494247603411-25a2921e0b28?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHVuZGVyZ3JvdW5kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sb3VyZnVsfGVufDB8fDB8&auto=format&fit=crop&w=700&q=60",
       song: "Lyla",
       artist: "Oasis",
     },
@@ -23,6 +23,18 @@ export default function Home() {
         "https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VsZWJyYXRpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
       song: "Yellow",
       artist: "Coldplay",
+    },
+    {
+      imgSrc:
+        "https://images.unsplash.com/photo-1524847587549-61a17a931f8b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sb3VyZnVsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60",
+      song: "Shine",
+      artist: "Take That",
+    },
+    {
+      imgSrc:
+        "https://images.unsplash.com/photo-1596436643132-6e58c3ae4cd4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhcnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60",
+      song: "In The End",
+      artist: "Linkin Park",
     },
   ];
 
