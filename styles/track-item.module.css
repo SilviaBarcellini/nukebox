@@ -1,0 +1,41 @@
+.TrackItem {
+  list-style: none;
+  display: grid;
+  grid-template-rows: 1.6em 1.6em;
+  grid-template-columns: 3.2em 1fr;
+  grid-template-areas:
+    "img song"
+    "img artist";
+  grid-column-gap: 15px;
+  align-items: center;
+}
+
+.song {
+  font-weight: bolder;
+  color: #b8b8b8;
+  grid-area: song;
+}
+
+.artist {
+  color: var(--secondary-text);
+  grid-area: artist;
+}
+
+.img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.TrackItem .song {
+  align-self: end;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.trackItem .artist {
+  align-self: start;
+}
