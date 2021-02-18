@@ -3,7 +3,7 @@
 export type APITrack = {
   id: string;
   imgSrc: string;
-  title: string;
+  song: string;
   artist: string;
 };
 

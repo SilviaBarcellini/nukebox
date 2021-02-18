@@ -53,7 +53,7 @@ export default function Home() {
   //this is now my new quelle
   //use now apiTracks newTracks is the result of getTracks()
   //add const "tracks" and set the status to an empty array from type "apitracks"
-  const [tracks, setTracks] = useState<apiTrack[]>([]);
+  const [tracks, setTracks] = useState<APITrack[]>([]);
 
   // (*)
   useEffect(() => {
