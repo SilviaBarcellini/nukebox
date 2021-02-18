@@ -3,14 +3,26 @@
     {
       "id": "scooter_paul-is-dead",
       "imgSrc": "https://images.unsplash.com/photo-1613473060226-dd81153a63db?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      "title": "Paul is Dead",
+      "song": "Paul is Dead",
       "artist": "Scooter"
     },
     {
       "id": "metallica_the-unforgiven",
       "imgSrc": "https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      "title": "The Unforgiven",
+      "song": "The Unforgiven",
       "artist": "Metallica"
+    },
+    {
+      "id": "song_2",
+      "imgSrc": "https://images.unsplash.com/photo-1534526616154-3e2202293a08?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+      "song": "Song 2",
+      "artist": "Blur"
+    },
+    {
+      "id": "yellow",
+      "imgSrc": "https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VsZWJyYXRpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+      "song": "Yellow",
+      "artist": "Coldplay"
     }
   ]
 }
