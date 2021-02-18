@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import Greeting from "../components/greeting";
 import TrackItem from "../components/track-item";
 import { APITrack, getTracks } from "../utils/api"; //new!
+import Link from "next/link"; //link to track page
+import tracks from "./api/tracks";
 
 export default function Home() {
   // obsolete from new commit (fetch tracks from API commit)
@@ -73,12 +75,16 @@ export default function Home() {
   //end commit commit fetch tracks from api
 
   const trackItems = tracks.map((track) => (
-    <TrackItem
-      key={`${track.artist}-${track.song}`}
-      imgSrc={track.imgSrc}
-      artist={track.artist}
-      song={track.song}
-    />
+    // <Link href={"/tracks/" + track.id} key={track.id}>
+    <Link href={`/tracks/${track.id}`} key={track.id}>
+      <a>
+        <TrackItem
+          imgSrc={track.imgSrc}
+          artist={track.artist}
+          song={track.song}
+        />
+      </a>
+    </Link>
   ));
   return (
     <div className={styles.container}>
