@@ -5,6 +5,7 @@ export type APITrack = {
   imgSrc: string;
   song: string;
   artist: string;
+  audioSrc: string;
 };
 
 //export asyncfunction "getTrack"
@@ -32,3 +33,9 @@ export async function getTrack(id: string) {
 // }
 
 //cfr. fetch on javascript.info
+
+export async function getTrack(id: string) {
+  const response = await fetch(`/api/tracks/${id}`);
+  const track: APITrack = await response.json();
+  return track;
+}

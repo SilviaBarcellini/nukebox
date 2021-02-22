@@ -32,7 +32,6 @@ export default function Home() {
       </a>
     </Link>
   ));
-
   return (
     <div className={styles.container}>
       <Head>
