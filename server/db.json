@@ -4,25 +4,29 @@
       "id": "scooter_paul-is-dead",
       "imgSrc": "https://images.unsplash.com/photo-1613473060226-dd81153a63db?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "song": "Paul is Dead",
-      "artist": "Scooter"
+      "artist": "Scooter",
+      "audioSrc": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/KBOO/The_Underscore_Orkestra/No_Money_No_Honey_All_We_Got_Is_Us/The_Underscore_Orkestra_-_02_-_Blue_Draggish.mp3"
     },
     {
       "id": "metallica_the-unforgiven",
       "imgSrc": "https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "song": "The Unforgiven",
-      "artist": "Metallica"
+      "artist": "Metallica",
+      "audioSrc": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/KBOO/The_Underscore_Orkestra/No_Money_No_Honey_All_We_Got_Is_Us/The_Underscore_Orkestra_-_02_-_Blue_Draggish.mp3"
     },
     {
       "id": "song_2",
       "imgSrc": "https://images.unsplash.com/photo-1534526616154-3e2202293a08?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
       "song": "Song 2",
-      "artist": "Blur"
+      "artist": "Blur",
+      "audioSrc": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/KBOO/The_Underscore_Orkestra/No_Money_No_Honey_All_We_Got_Is_Us/The_Underscore_Orkestra_-_02_-_Blue_Draggish.mp3"
     },
     {
       "id": "yellow",
       "imgSrc": "https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VsZWJyYXRpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
       "song": "Yellow",
-      "artist": "Coldplay"
+      "artist": "Coldplay",
+      "audioSrc": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/KBOO/The_Underscore_Orkestra/No_Money_No_Honey_All_We_Got_Is_Us/The_Underscore_Orkestra_-_02_-_Blue_Draggish.mp3"
     }
   ]
 }

@@ -5,7 +5,7 @@ export type APITrack = {
   imgSrc: string;
   song: string;
   artist: string;
-  //audioSrc:
+  audioSrc: string;
 };
 
 //export asyncfunction "getTrack"
