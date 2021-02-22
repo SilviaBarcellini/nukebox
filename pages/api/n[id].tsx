@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+/* import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/track-item.module.css";
@@ -36,8 +36,7 @@ export default function Track() {
           <img className={styles.img} src={track.imgSrc} alt="" />
           <div className={styles.artist}>{track.artist}</div>
           <div className={styles.song}>{track.song}</div>
-          {/* <div>{audioSrc}</div> */}
-        </div>
+        /* </div>
       </main>
       <footer className={styles.footer}>
         <a className={styles.love} href="">
@@ -52,4 +51,4 @@ export default function Track() {
       </footer>
     </div>
   );
-}
+} */

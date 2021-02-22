@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/[id].module.css";
 import ReactAudioPlayer from "../../components/react-audioplayer";
+import Header from "../../components/header";
 
 export default function Track() {
   const router = useRouter();
@@ -31,12 +32,15 @@ export default function Track() {
 
   return (
     <div className={styles.pageContainer}>
-      <header className={styles.header}>
+      <header>
+        <Header />
+      </header>
+      {/* <header className={styles.header}>
         <a className={styles.backHome} href="http://localhost:3000/">
           👈 Back!👈{" "}
         </a>
         <div className={styles.track}>Now Playing: {track.song}</div>
-      </header>
+      </header> */}
       <main>
         <div className={styles.mainContainer}>
           <img className={styles.img} src={track.imgSrc} alt="" />
