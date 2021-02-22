@@ -4,6 +4,7 @@ type Props = {
   imgSrc: string;
   song: string;
   artist: string;
+  audioSrc: string;
   /* audioSrc = string; */
 };
 
@@ -16,4 +17,5 @@ type Props = {
       <div className={styles.song}>{song}</div>
     </div>
   );
+  still needs some extra fix
 } */

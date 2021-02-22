@@ -19,7 +19,7 @@ export default function Home() {
       setTracks(newTracks);
     });
   }, []);
-  //end commit commit fetch tracks from api (*)
+  //end commit fetch (*)
 
   const trackItems = tracks.map((track) => (
     <Link href={`/tracks/${track.id}`} key={track.id}>

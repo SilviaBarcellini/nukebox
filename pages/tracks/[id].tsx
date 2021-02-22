@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/[id].module.css";
+import ReactAudioPlayer from "../../components/react-audioplayer";
 
 export default function Track() {
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function Track() {
   //const trackItem = (
   //  <nowPlaying img={track.imgSrc‚} song={track.song} artist={track.artist} />
   //);
+  //still needs some extra fix
 
   return (
     <div className={styles.pageContainer}>
@@ -44,6 +46,7 @@ export default function Track() {
         </div>
       </main>
       <footer className={styles.footer}>
+        <ReactAudioPlayer src={track.audioSrc} />
         <a className={styles.love} href="">
           😍 Love it!
         </a>
