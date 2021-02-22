@@ -1,3 +1,7 @@
+.header {
+  margin-top: 2em;
+}
+
 .track {
   color: #ff36ab;
   padding: 3em 1em 1em 1em;
@@ -30,41 +34,6 @@
   justify-items: center;
   column-gap: 0.5em;
 }
-
-.love {
-  background-color: rgb(10, 93, 10);
-  color: white;
-  padding: 1.5em;
-  border-radius: 2em;
-}
-
-.hate {
-  background-color: red;
-  color: white;
-  padding: 1.5em;
-  border-radius: 2em;
-}
-
-.mine {
-  background-color: #ff36ab;
-  color: white;
-  padding: 1.5em;
-  border-radius: 2em;
-}
-
-.love:hover {
-  background-color: #06d6a0;
-  cursor: pointer;
-}
-.hate:hover {
-  background-color: #e5383b;
-  cursor: pointer;
-}
-.mine:hover {
-  background-color: #b5179e;
-  cursor: pointer;
-}
-
 .img {
   grid-area: img;
   width: 100%;

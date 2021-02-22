@@ -4,6 +4,7 @@ import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/[id].module.css";
 import ReactAudioPlayer from "../../components/react-audioplayer";
 import Header from "../../components/header";
+import Buttons from "../../components/buttons";
 
 export default function Track() {
   const router = useRouter();
@@ -32,49 +33,22 @@ export default function Track() {
 
   return (
     <div className={styles.pageContainer}>
-      <header>
+      <header className={styles.header}>
         <Header />
       </header>
-      {/* <header className={styles.header}>
-        <a className={styles.backHome} href="http://localhost:3000/">
-          👈 Back!👈{" "}
-        </a>
-        <div className={styles.track}>Now Playing: {track.song}</div>
-      </header> */}
       <main>
         <div className={styles.mainContainer}>
           <img className={styles.img} src={track.imgSrc} alt="" />
           <div className={styles.artist}>{track.artist}</div>
           <div className={styles.song}>{track.song}</div>
-          {/* <div>{audioSrc}</div> */}
         </div>
       </main>
-      <footer className={styles.footer}>
-        <ReactAudioPlayer src={track.audioSrc} />
-        <a className={styles.love} href="">
-          😍 Love it!
-        </a>
-
-        <a className={styles.mine} href="">
-          my list 🖤
-        </a>
-        <a className={styles.hate} href="">
-          🤢 Nope!
-        </a>
-      </footer>
-
       <div>
-        <figure>
-          <audio
-            className={styles.audioPlayer}
-            controls
-            src="/media/cc0-audio/t-rex-roar.mp3"
-          >
-            Your browser does not support the
-            <code>audio</code> element.
-          </audio>
-        </figure>
+        <ReactAudioPlayer src={track.audioSrc} />
       </div>
+      <footer className={styles.footer}>
+        <Buttons />
+      </footer>
     </div>
   );
 }
