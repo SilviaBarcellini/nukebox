@@ -1,7 +1,3 @@
-/* .pageContainer {
-  display: table;
-} */
-
 .track {
   color: #ff36ab;
   padding: 3em 1em 1em 1em;
@@ -12,8 +8,6 @@
 
 .backHome {
   background-color: black;
-
-  /*  box-shadow: 0 5px 0 rgb(183, 17, 248); */
   color: white;
   padding: 1.5em;
   border-radius: 2em;
@@ -33,12 +27,8 @@
 .mainContainer {
   display: grid;
   padding: 2em;
-
-  /* grid-template-rows: 30rem 10%; */
   grid-template-rows: 30rem;
   grid-template-areas: "img";
-
-  /*  "song artist"; */
 }
 
 .mainContainer .song {
@@ -80,43 +70,6 @@
   border-radius: 2em;
 }
 
-/* .pageContainer {
-  display: grid;
-  grid-template-rows: 10% 20% 50% 20%;
-  grid-template-columns: 100%;
-  /* grid-template-areas:
-    "img song"
-    "img artist"; */
-
-/* grid-column-gap: 3em;
-  align-items: center;
-} */
-
-/* .navigation {
-  display: grid;
-  grid-template-columns: 50% 50%;
-} */
-
-/* .song {
-  font-weight: bolder;
-  color: #b8b8b8;
-  grid-area: song;
-} */
-
-/* .artist {
-  color: var(--secondary-text);
-  grid-area: artist;
-} */
-
-.img {
-  grid-area: img;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  object-fit: cover;
-  border-radius: 25px;
-}
-
 .love:hover {
   background-color: #06d6a0;
   cursor: pointer;
@@ -128,4 +81,13 @@
 .mine:hover {
   background-color: #b5179e;
   cursor: pointer;
+}
+
+.img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: 25px;
 }

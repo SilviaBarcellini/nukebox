@@ -1,11 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-/* import { setFlagsFromString } from "v8"; */
 import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/[id].module.css";
-//import Props from "../../components/playing";
-//import { SSL_OP_SINGLE_DH_USE } from "constants";
-//import Head from "next/head";
 
 export default function Track() {
   const router = useRouter();
@@ -21,7 +17,6 @@ export default function Track() {
     getTrack(id).then((newTrack) => {
       setTrack(newTrack);
     });
-    // todo get track by `id`
   }, [id]);
 
   if (!track) {
@@ -63,7 +58,6 @@ export default function Track() {
 
       <div>
         <figure>
-          {/* <figcaption>Listen to the T-Rex:</figcaption> */}
           <audio
             className={styles.audioPlayer}
             controls
@@ -73,13 +67,7 @@ export default function Track() {
             <code>audio</code> element.
           </audio>
         </figure>
-        {/* <audio src={track.audioSrc}></audio> */}
-        {/* <footer><AudioPlayer /></footer> */}
       </div>
     </div>
   );
-
-  {
-    /* <div>Now Playing: {track.song}</div> */
-  }
 }
