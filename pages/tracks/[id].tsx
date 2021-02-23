@@ -9,7 +9,6 @@ import Buttons from "../../components/buttons";
 export default function Track() {
   const router = useRouter();
   const { id } = router.query;
-
   const [track, setTrack] = useState<APITrack>(null);
 
   useEffect(() => {
@@ -26,11 +25,6 @@ export default function Track() {
     return <div>Loading...</div>;
   }
 
-  //const trackItem = (
-  //  <nowPlaying img={track.imgSrc‚} song={track.song} artist={track.artist} />
-  //);
-  //still needs some extra fix
-
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
@@ -44,10 +38,12 @@ export default function Track() {
         </div>
       </main>
       <div>
-        <ReactAudioPlayer src={track.audioSrc} />
+        <ReactAudioPlayer src={track.audioSrc} id={track.id} />
       </div>
       <footer className={styles.footer}>
-        <Buttons />
+        <div>
+          <Buttons id={track.id} />
+        </div>
       </footer>
     </div>
   );

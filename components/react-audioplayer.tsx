@@ -3,6 +3,7 @@ import styles from "../styles/ReactAudioPlayer.module.css";
 
 type Props = {
   src: string;
+  id: string;
 };
 //function, it "extracts" src from properties
 export default function AudioPlayer({ src }: Props) {
