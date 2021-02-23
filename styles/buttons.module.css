@@ -12,8 +12,7 @@
   border-radius: 2em;
 }
 
-.mine {
-  /* background-color: #ff36ab; */
+.favorite {
   color: white;
   padding: 1.5em;
   border-radius: 2em;
@@ -27,8 +26,8 @@
   color: #e5383b;
   cursor: pointer;
 }
-.mine:hover {
-  color: rgb(255, 134, 154);
+.favorite:hover {
+  background-color: #ff36ab;
   cursor: pointer;
   font-size: 1.2em;
 }
