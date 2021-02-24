@@ -11,7 +11,11 @@ export default function Track() {
   const router = useRouter();
   //const { id } = router.query;
   const { id: idQuery } = router.query;
-  const id = typeof idQuery === "string" ? idQuery : idQuery[0];
+  //const id = typeof idQuery === "string" ? idQuery : idQuery[0];
+  if (!idQuery) {
+    return null;
+  }
+  const id = typeof idQuery !== "string" ? idQuery[0] : idQuery;
   const [track, setTrack] = useState<APITrack>(null);
 
   useEffect(() => {
