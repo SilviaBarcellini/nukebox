@@ -11,7 +11,6 @@ export default function Track() {
   const router = useRouter();
   const { id } = router.query;
   const [track, setTrack] = useState<APITrack>(null);
-  //const [storedValue, setValue] = useLocalStorage("favoriteSong", "");
 
   useEffect(() => {
     //console.log(id);

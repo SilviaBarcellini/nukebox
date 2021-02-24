@@ -7,23 +7,6 @@ type Props = {
 };
 
 export default function Buttons({ id }: Props) {
-  /* const [favorite, setFavorite] = useState(null);
-  const [storedValue, setValue] = useLocalStorage("favoriteSong", "");
-
-  useEffect(() => {
-    if (typeof id !== "string" || favorite === null) {
-      return;
-    }
-    if (favorite) {
-      //localStorage.setItem("favoriteSong", id); OLD
-      setValue(id);
-    }
-    if (!favorite) {
-      //localStorage.removeItem("favoriteSong"); OLS
-      setValue("");
-    }
-  }, [favorite]); */
-
   const [favoriteSongs, setFavoriteSongs] = useLocalStorage(
     "favoriteSongs",
     []
@@ -34,8 +17,6 @@ export default function Buttons({ id }: Props) {
     if (typeof id !== "string" || favorite === null) {
       return;
     }
-    //setFavorite(id === localStorage.getItem("favoriteSong"));
-    //setFavorite(id === storedValue);
   }, [id]);
 
   const handleFavoriteClick = () => {
@@ -51,9 +32,6 @@ export default function Buttons({ id }: Props) {
 
   return (
     <footer>
-      {/* <button className={styles.btn} onClick={() => setFavorite(!favorite)}>
-        {favorite ? " 💚  " : " 🖤  "}
-      </button> */}
       <button className={styles.btn} onClick={handleFavoriteClick}>
         {favorite ? "💚 " : "🖤"}
       </button>
