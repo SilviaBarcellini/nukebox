@@ -8,15 +8,16 @@ type Props = {
 
 export default function Buttons({ id }: Props) {
   const [favoriteSongs, setFavoriteSongs] = useLocalStorage(
+    //(*)const [favoriteSongs, setFavoriteSongs] = useLocalStorage<string[]>(
     "favoriteSongs",
     []
   );
   const favorite = favoriteSongs.includes(id);
 
   useEffect(() => {
-    if (typeof id !== "string" || favorite === null) {
-      return;
-    }
+    //(*)  if (typeof id !== "string" || favorite === null) {
+    //(*)    return;
+    //(*)  }
   }, [id]);
 
   const handleFavoriteClick = () => {
@@ -40,3 +41,6 @@ export default function Buttons({ id }: Props) {
     </footer>
   );
 }
+
+//commented is 🏷️ Add types to useLocalStorage commit
+//look useLocalsStorage (commented)

@@ -9,7 +9,9 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 
 export default function Track() {
   const router = useRouter();
-  const { id } = router.query;
+  //const { id } = router.query;
+  const { id: idQuery } = router.query;
+  const id = typeof idQuery === "string" ? idQuery : idQuery[0];
   const [track, setTrack] = useState<APITrack>(null);
 
   useEffect(() => {
