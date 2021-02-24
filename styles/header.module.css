@@ -1,9 +1,10 @@
 .backHome {
-  margin: 2em;
-  background-color: black;
   color: white;
+  margin: 2em;
+
+  /* background-color: black;
   padding: 1.5em;
-  border-radius: 2em;
+  border-radius: 2em; */
 }
 
 .backHome:hover {

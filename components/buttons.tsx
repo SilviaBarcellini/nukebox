@@ -54,7 +54,9 @@ export default function Buttons({ id }: Props) {
       {/* <button className={styles.btn} onClick={() => setFavorite(!favorite)}>
         {favorite ? " 💚  " : " 🖤  "}
       </button> */}
-      <button onClick={handleFavoriteClick}>{favorite ? "💚 " : "🖤"}</button>
+      <button className={styles.btn} onClick={handleFavoriteClick}>
+        {favorite ? "💚 " : "🖤"}
+      </button>
       <button className={styles.btn}>😍 Love it!</button>
       <button className={styles.btn}>😡 Nope!</button>
     </footer>
