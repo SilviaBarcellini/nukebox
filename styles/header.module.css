@@ -1,0 +1,13 @@
+.backHome {
+  margin: 2em;
+  background-color: black;
+  color: white;
+  padding: 1.5em;
+  border-radius: 2em;
+}
+
+.backHome:hover {
+  color: #ff36ab;
+  font-size: 1.2em;
+  cursor: pointer;
+}

@@ -15,6 +15,10 @@
   color: #ffb8de;
   grid-area: song;
 }
+.song:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
 
 .artist {
   color: var(--secondary-text);
