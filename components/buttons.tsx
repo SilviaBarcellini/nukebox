@@ -38,6 +38,7 @@ export default function Buttons({ id }: Props) {
       </button>
       <button className={styles.btn}>😍 Love it!</button>
       <button className={styles.btn}>😡 Nope!</button>
+      <button className={styles.btn}>DELETE</button>
     </footer>
   );
 }

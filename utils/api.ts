@@ -1,4 +1,7 @@
 //new from commit Fetch tracks from API
+
+import tracks from "../pages/api/tracks";
+
 //every APITrack element will have to contain this:
 export type APITrack = {
   id: string;
@@ -48,3 +51,14 @@ export async function getTrack(id: string): Promise<APITrack> {
 // }
 
 //cfr. fetch on javascript.info
+
+export async function deleteTrack(id: string) {
+  await fetch(
+    `/api/tracks/${id}`,
+    {
+      method: "DELETE",
+    }
+    //const deletedTrack = "track successfully removed";
+    //return deletedTrack
+  );
+}
