@@ -52,6 +52,7 @@ export async function getTrack(id: string): Promise<APITrack> {
 
 //cfr. fetch on javascript.info
 
+//export async function deleteTrack(id) {-DONE ALREADY!!🎉 🎉 🎉
 export async function deleteTrack(id: string) {
   await fetch(
     `/api/tracks/${id}`,
