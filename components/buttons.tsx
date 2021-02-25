@@ -1,6 +1,7 @@
 import styles from "../styles/buttons.module.css";
 import { useEffect, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { APITrack, deleteTrack, getTrack } from "../utils/api";
 
 type Props = {
   id: string;
@@ -38,7 +39,9 @@ export default function Buttons({ id }: Props) {
       </button>
       <button className={styles.btn}>😍 Love it!</button>
       <button className={styles.btn}>😡 Nope!</button>
-      <button className={styles.btn}>DELETE</button>
+      <button className={styles.btn} onClick={() => deleteTrack(id)}>
+        DELETE 🗑
+      </button>
     </footer>
   );
 }
