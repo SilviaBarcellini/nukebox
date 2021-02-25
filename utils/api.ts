@@ -61,5 +61,5 @@ export async function deleteTrack(id: string) {
     //const deletedTrack = "track successfully removed";
     //return deletedTrack
   );
-  alert("Item removed from your playlist!");
+  alert("Song removed from your playlist!");
 }
