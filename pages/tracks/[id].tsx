@@ -4,7 +4,7 @@ import { APITrack, getTrack } from "../../utils/api";
 import styles from "../../styles/[id].module.css";
 import ReactAudioPlayer from "../../components/react-audioplayer";
 import Header from "../../components/header";
-import Buttons from "../../components/buttons";
+//import Buttons from "../../components/buttons";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 export default function Track() {
@@ -48,9 +48,9 @@ export default function Track() {
         <ReactAudioPlayer src={track.audioSrc} id={track.id} />
       </div>
       <footer className={styles.footer}>
-        <div>
-          <Buttons id={track.id} />
-        </div>
+        {/* <div>
+//          <Buttons id={track.id} />
+        </div> */}
       </footer>
     </div>
   );
