@@ -4,7 +4,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { readDb } from "../../../server/db";
 
 //OLD export default (_req: NextApiRequest, res: NextApiResponse) => {
-export default (_req: NextApiRequest, res: NextApiResponse) => {
+/* export default (_req: NextApiRequest, res: NextApiResponse) => {
   const db = await readDb();
   res.status(200).json(db.tracks);
 };
+ */

@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { write } from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
-import tracks from ".";
 /* import db from "../../../server/db.json"; */
 import { readDb, writeDb } from "../../../server/db";
 

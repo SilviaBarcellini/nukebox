@@ -1,6 +1,6 @@
 //new from commit Fetch tracks from API
 
-import tracks from "../pages/api/tracks";
+//import tracks from "../pages/api/tracks";
 
 //every APITrack element will have to contain this:
 export type APITrack = {
