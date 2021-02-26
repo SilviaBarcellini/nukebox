@@ -17,5 +17,3 @@ export async function writeDb(db: DB) {
   const dbJSON = JSON.stringify(db, null, 2);
   await fs.writeFile(DB_PATH, dbJSON);
 }
-
-//✨ Add filesystem helpers to read and write db.json

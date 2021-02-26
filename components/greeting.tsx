@@ -1,5 +1,4 @@
-import hello from "../pages/api/hello";
-import styles from "../styles/greeting.module.css";
+import styles from "../styles/Greeting.module.css";
 
 type Props = {
   name: string;
@@ -7,7 +6,7 @@ type Props = {
 
 export default function Greeting(props: Props) {
   return (
-    <p className={styles.hello}>
+    <p>
       Hello, <span className={styles.name}>{props.name}</span>
     </p>
   );
