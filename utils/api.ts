@@ -64,3 +64,11 @@ export async function deleteTrack(id: string) {
   );
   alert("Song removed from your playlist!");
 }
+
+export async function postSong(newSong: APITrack) {
+  return await fetch("/api/tracks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newSong),
+  });
+}

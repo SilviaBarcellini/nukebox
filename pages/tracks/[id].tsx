@@ -57,7 +57,7 @@ export default function Track() {
       <button onClick={handleDeleteClick}>🗑</button>
       <footer>
         <AudioPlayer src={track.audioSrc} />
-        <a href="http://localhost:3000/">{"👈 Back!👈 "}</a>
+        {/* <a href="http://localhost:3000/">{"👈 Back!👈 "}</a> */}
       </footer>
     </div>
   );
