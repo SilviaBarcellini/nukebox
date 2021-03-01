@@ -1,18 +1,27 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Greeting from "../components/greeting";
-import TrackItem from "../components/track-item";
 import styles from "../styles/Home.module.css";
 import { APITrack, getTracks } from "../utils/api";
-import Link from "next/link";
+import ViewsCount from "../components/viewsCount";
+import useLocalStorage from "../hooks/useLocalStorage";
+import TrackItemList from "../components/trackItemList";
+import OpenFormPage from "../components/addSong";
 
 export default function Home() {
   const [tracks, setTracks] = useState<APITrack[]>([]);
-  useEffect(() => {
-    console.log("Home page is mounted");
+  const [favoriteTrackIds] = useLocalStorage<string[]>("favoriteTracks", []);
+
+  function refreshTracks() {
     getTracks().then((newTracks) => {
       setTracks(newTracks);
     });
+  }
+
+  useEffect(() => {
+    console.log("Home page is mounted");
+    refreshTracks();
+
     // async function doFetch() {
     //   const newTracks = await getTracks();
     //   setTracks(newTracks);
@@ -20,26 +29,32 @@ export default function Home() {
     // doFetch()
   }, []);
 
-  const trackItems = tracks.map((track) => (
-    // <Link href={"/tracks/" + track.id} key={track.id}>
-    <Link href={`/tracks/${track.id}`} key={track.id}>
-      <a>
-        <TrackItem
-          imgSrc={track.imgSrc}
-          artist={track.artist}
-          song={track.song}
-        />
-      </a>
-    </Link>
-  ));
+  const favoriteTracks = tracks.filter((track) =>
+    favoriteTrackIds.includes(track.id)
+  );
+
+  const notFavoriteTracks = tracks.filter(
+    (track) => !favoriteTrackIds.includes(track.id)
+  );
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Nukebox</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ViewsCount />
       <Greeting name="Philipp" />
-      <ul className={styles.list}>{trackItems}</ul>
+      <h3>Favorites</h3>
+      <TrackItemList items={favoriteTracks} onTrackDeleted={refreshTracks} />
+      <h3>Others</h3>
+      <TrackItemList items={notFavoriteTracks} onTrackDeleted={refreshTracks} />
+      <OpenFormPage />
+      <footer>
+        <div>
+          <a className="plus" href="http://localhost:3000/new"></a>
+        </div>
+      </footer>
     </div>
   );
 }

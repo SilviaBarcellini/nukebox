@@ -1,27 +1,45 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { APITrack, getTrack } from "../../utils/api";
-import styles from "../../styles/[id].module.css";
-import ReactAudioPlayer from "../../components/react-audioplayer";
-import Header from "../../components/header";
-import Buttons from "../../components/buttons";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import AudioPlayer from "../../components/audioPlayer";
+import TrackDetails from "../../components/trackDetails";
+import Header from "../../components/header";
+import { APITrack, deleteTrack, getTrack } from "../../utils/api";
+import styles from "../../styles/[id].module.css";
 
 export default function Track() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id: idQuery } = router.query;
+  if (!idQuery) {
+    return null;
+  }
+  const id = typeof idQuery !== "string" ? idQuery[0] : idQuery;
   const [track, setTrack] = useState<APITrack>(null);
-  //const [storedValue, setValue] = useLocalStorage("favoriteSong", "");
+  const [favoriteTrackIds, setFavoriteTrackIds] = useLocalStorage<string[]>(
+    "favoriteTracks",
+    []
+  );
+  const isFavorite = favoriteTrackIds.includes(id);
 
   useEffect(() => {
-    //console.log(id);
-    if (typeof id !== "string") {
-      return;
-    }
-    getTrack(id).then((newTrack) => {
-      setTrack(newTrack);
-    });
+    getTrack(id).then((newTrack) => setTrack(newTrack));
   }, [id]);
+
+  const handleFavoriteClick = () => {
+    if (isFavorite) {
+      const newFavoriteTracks = favoriteTrackIds.filter(
+        (favoritTrack) => favoritTrack !== id
+      );
+      setFavoriteTrackIds(newFavoriteTracks);
+    } else {
+      setFavoriteTrackIds([...favoriteTrackIds, id]);
+    }
+  };
+
+  const handleDeleteClick = async () => {
+    await deleteTrack(track.id);
+    router.back();
+  };
 
   if (!track) {
     return <div>Loading...</div>;
@@ -34,18 +52,21 @@ export default function Track() {
       </header>
       <main>
         <div className={styles.mainContainer}>
-          <img className={styles.img} src={track.imgSrc} alt="" />
-          <div className={styles.artist}>{track.artist}</div>
-          <div className={styles.song}>{track.song}</div>
+          <TrackDetails
+            imgSrc={track.imgSrc}
+            title={track.song}
+            artist={track.artist}
+          />
         </div>
       </main>
-      <div>
-        <ReactAudioPlayer src={track.audioSrc} id={track.id} />
-      </div>
-      <footer className={styles.footer}>
-        <div>
-          <Buttons id={track.id} />
-        </div>
+
+      <footer>
+        <AudioPlayer src={track.audioSrc} />
+        {/* <a href="http://localhost:3000/">{"👈 Back!👈 "}</a> */}
+        <button onClick={handleFavoriteClick}>
+          {isFavorite ? "💚" : "🖤"}
+        </button>
+        <button onClick={handleDeleteClick}>🗑</button>
       </footer>
     </div>
   );
