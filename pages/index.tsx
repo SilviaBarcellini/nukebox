@@ -6,6 +6,7 @@ import { APITrack, getTracks } from "../utils/api";
 import ViewsCount from "../components/viewsCount";
 import useLocalStorage from "../hooks/useLocalStorage";
 import TrackItemList from "../components/trackItemList";
+import OpenFormPage from "../components/addSong";
 
 export default function Home() {
   const [tracks, setTracks] = useState<APITrack[]>([]);
@@ -48,11 +49,12 @@ export default function Home() {
       <TrackItemList items={favoriteTracks} onTrackDeleted={refreshTracks} />
       <h3>Others</h3>
       <TrackItemList items={notFavoriteTracks} onTrackDeleted={refreshTracks} />
-      <ul>
-        <li>
-          <a href="http://localhost:3000/new">new</a>
-        </li>
-      </ul>
+      <OpenFormPage />
+      <footer>
+        <div>
+          <a className="plus" href="http://localhost:3000/new"></a>
+        </div>
+      </footer>
     </div>
   );
 }

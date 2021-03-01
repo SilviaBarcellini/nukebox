@@ -1,3 +1,36 @@
-.form {
-  background-color: black;
+.list {
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 15px;
+}
+
+.placeholder {
+  margin: 1em;
+  color: #335c67;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  background: #ffc6ff;
+  border: none;
+  padding: 15px 20px;
+}
+
+.label {
+  color: #fad2e1;
+}
+.btn {
+  margin: 1em;
+  color: white;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 1.2rem bolder;
+  background: #1fa9ff;
+  border: none;
+  padding: 15px 20px;
+}
+
+.btn:hover {
+  background-color: #ff36ab;
+  cursor: pointer;
 }
